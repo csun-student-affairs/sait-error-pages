@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://frontend.studentaffairs.csun.edu/four-oh-four/favicon.ico">
+
+    <title>Maintenance Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/error.css">    
+    <!--<link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_csun.png"> -->
+    <!-- Custom styles for this template -->
+    
+    <script type="text/javascript">
+      function loadDomain()
+      {
+        var display = document.getElementById("display-domain");
+        display.innerHTML = document.domain;
+      }
+    </script>
+  </head>
+
+  <body onload="javascript:loadDomain();">
+
+    <div class="container">
+      <div class="header clearfix">
+        <a href="http://www.csun.edu"><img src="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_csun.png" style=" margin-right: 10px; padding-right: 10px;" alt="CSUN logo"/></a>
+        <a href="http://www.csun.edu/sait"><img src="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_sait.png" alt="CSUN SAIT logo" /></a>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="roboto"><span class="glyphicon glyphicon-wrench" style="color:#347834;"></span> Temporary Maintenance</h1>
+        <p class="lead">The web server for <em><span id="display-domain"></span></em> is currently undergoing some maintenance.</p>
+        <a class="btn btn-lg btn-default" style="color:#347834" href="javascript:document.location.reload(true);" role="button">Try This Page Again</a>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h2>What happened?</h2>
+          <p>Servers and websites need regular maintnance just like a car to keep them up and running smoothly.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h2>What can I do?</h2>
+          <p>Nothing you can do at the moment. If you need immediate assistance, please send us an email instead. We apologize for any inconvenience.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; CSU Northridge 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

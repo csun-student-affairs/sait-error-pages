@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://frontend.studentaffairs.csun.edu/four-oh-four/favicon.ico">
+
+    <title>504 Error</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/error.css">    
+    <!--<link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_csun.png"> -->
+    <!-- Custom styles for this template -->
+    
+    <script type="text/javascript">
+      function loadDomain()
+      {
+        var display = document.getElementById("display-domain");
+        display.innerHTML = document.domain;
+      }
+    </script>
+  </head>
+
+  <body onload="javascript:loadDomain();">
+
+    <div class="container">
+      <div class="header clearfix">
+        <a href="http://www.csun.edu"><img src="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_csun.png" style=" margin-right: 10px; padding-right: 10px;" alt="CSUN logo"/></a>
+        <a href="http://www.csun.edu/sait"><img src="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_sait.png" alt="CSUN SAIT logo" /></a>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="roboto"><span class="glyphicon glyphicon-time" style="color:#F0AD4E;"></span> 504 Gateway Timeout</h1>
+        <p class="lead">The web server is returning an unexpected networking error for <em><span id="display-domain"></span></em>.</p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h2>What happened?</h2>
+          <p>A 504 error status implies there is a slow IP communication problem between back-end servers attempting to fulfill this request.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h2>What can I do?</h2>
+          <p><a onclick=javascript:checkSite();>Check to see if this website down for everyone or just you.</a>
+          <script type="text/javascript">
+              function checkSite(){
+                var currentSite = window.location.hostname;
+                  window.location = "http://isup.me/" + currentSite;
+              }
+          </script></p>
+        <p>Also, clearing your browser cache and refreshing the page may clear this issue. If the problem persists and you need immediate assistance, please send us an email instead.</p>
+
+          <h2>Contact Us</h2>
+          <!-- BEGIN: form -->
+          <form action="http://studentaffairs.csun.edu/mailer/" method="post" enctype="multipart/form-data">
+          
+          <input type="hidden" name="access_key" value="0cebb29972030f98b177d6dd1e85057122568903" />
+          <label for="q1"><strong>Description of problem<span class="red">*</span></strong></label><br />
+          <textarea cols="40" rows="5" id="q1" name="Description of Problem" class="form-control" placeholder="Describe what brought you here"></textarea><br /><br />
+          
+          <label for="q2"><strong>E-mail<span class="red">*</span></strong></label><br />
+          
+          <input type="text" id="q2" name="E-mail" class="form-control" placeholder="Please enter your csun email" /><br />
+          
+          <div style="display: none;">
+          <label for="q3">Phone</label><input type="text" id="q3" name="Captcha" />
+          </div>
+          
+          <p><span class="red">*</span> Indicates a required field</p>
+          
+          <input type="submit" value="SUBMIT" title="SUBMIT" class="btn btn-default" />
+          </form>
+          <!-- END: form -->
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; CSU Northridge 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
