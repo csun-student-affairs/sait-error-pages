@@ -13,7 +13,9 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/error.css">    
+    <link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/error.css"> 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>   
+    <script type="text/javascript" src="https://frontend.studentaffairs.csun.edu/four-oh-four/browser.js"></script>       
     <!--<link rel="stylesheet" href="https://frontend.studentaffairs.csun.edu/four-oh-four/images/logo_csun.png"> -->
     <!-- Custom styles for this template -->
     
@@ -22,6 +24,7 @@
       {
         var display = document.getElementById("display-domain");
         display.innerHTML = document.domain;
+        detectBrowser();
       }
     </script>
   </head>
@@ -54,6 +57,7 @@
           <form action="http://studentaffairs.csun.edu/mailer/" method="post" enctype="multipart/form-data">
           
           <input type="hidden" name="access_key" value="0cebb29972030f98b177d6dd1e85057122568903" />
+          <input type="hidden" id="browser_data" name="Browser Data" value="" />
           <label for="q1"><strong>Description of problem<span class="red">*</span></strong></label><br />
           <textarea cols="40" rows="5" id="q1" name="Description of Problem" class="form-control" placeholder="Describe what brought you here"></textarea><br />
           
